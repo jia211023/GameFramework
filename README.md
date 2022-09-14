@@ -1,118 +1,55 @@
-# ShmupPlusPlus
+# A Game Framework For Rapid Development That Conforms To The MLGame AI Game Framework
 
-## 遊戲說明
 
-Shmup（shoot-em-up）PlusPlus，一款主角可無限殺敵的遊戲。
+[![GameFramework](https://img.shields.io/github/v/tag/Jesse-Jumbo/GameFramework)](https://github.com/Jesse-Jumbo/GameFramework/tree/0.4.1)
+[![MLGame](https://img.shields.io/badge/MLGame-10.0.0-<COLOR>.svg)](https://github.com/PAIA-Playful-AI-Arena/MLGame)
 
-玩家要躲避怪物下的炸彈，擊殺在天上移動的怪物，獲取更高的積分
 
----
-## 圖片來源
-
-## 聲音來源
-https://opengameart.org/content/fantastic-japanese-style-shoot-em-up-game-music
-https://opengameart.org/content/gunloop-8bit
-## Requirements
-
-- Python==3.9
-- mlgame
+[![Python 3.9](https://img.shields.io/badge/python->3.9-blue.svg)](https://www.python.org/downloads/release/python-390/)
+[![pytmx](https://img.shields.io/badge/pytmx-3.31-blue.svg)](https://github.com/bitcraft/pytmx/releases/tag/v3.31)
 
 ---
+# !Notice！
+- v0.1.x 以前，範例遊戲未使用GameFramework開發
+- v0.2.x 以後，範例遊戲使用GameFramework所開發
+- v0.4.x 以後，新增單人和雙人遊戲模板，game_module 持續更新中
+- v0.5.x 以後，新增開發教學文件，game_module 持續更新中
+---
+# 專案說明
+- **games裡的遊戲，根據 MLGame 框架所開發，可以在 PAIA－Desktop 透過ＡＩ來玩遊戲，並進行ＡＩ競賽。**
+- **game_module 是用於方便開發遊戲可被使用的套件**
+- **game_templates 存放不同種類的遊戲模板**
+- **SampleGame 是已開發完成的範例遊戲（正在重構中）**
 
-## 即將更新內容
+[//]:# (game gif)
 
-- 
+## 使用方式
+
+1. **Select the desired template from the game_templates and refactor it.**
+2. **Start the game by following the development_tutorial.**
+
+## 遊戲啟動規定
+- 請看MLGame ＡＩ遊戲框架說明[README.md](https://github.com/PAIA-Playful-AI-Arena/MLGame/blob/master/README.md)
 
 ---
+## View
 
-## 遊戲簡介:
-
-單人遊戲，玩家透過方向鍵操控人物，按下F鍵進行射擊。
-
----
-
-# 遊戲細節：
+1. 認識MLGame遊戲框架 [MLGame](https://github.com/PAIA-Playful-AI-Arena/MLGame)
+2. 查詢所有Pygame函式 [Pygame](https://www.pygame.org/docs/index.html#)
+3. 開源的素材網站 [OpenGameArt.Org](https://opengameart.org/)
+4. 地圖製作說明 [坦克大作戰地圖製作教學](https://github.com/Jesse-Jumbo/TankMan/blob/main/Mapping.md)
 
 ---
+## Future Work
 
-## 啟動方式:
-
-- 直接啟動`main.py`即可執行。
-- 在命令行輸入命令執行。
-
----
-
-## 遊戲參數設定
-
-```python
-# main.py
-game = ShmupPlusPlus.ShmupPlusPlus(map_no=1, time_limit=300, sound="off")
-```
-
-- `ShmupPlusPlus`後不輸入參數，則默認使用預設值，即範例參數值。
-
-```bash
-# MLGame.py
-# command line format
-python -m mlgame [options] <game_folder> [game_params]
-# A sample to play the game with manual
-python -m mlgame \
--f 120 -i ./path/to/ai/ml_play_manual.py \
-./path/to/game/ShmupPlusPlus \
---map_no 1 --time_limit 300 --sound "off"
-# A sample to play the game with AI
-python -m mlgame \
--f 120 -i ./path/to/ai/ml_play_template.py \
-./path/to/game/ShmupPlusPlus \
- --sound on --time_limit 30 --map_no 1
-```
-
-- `map_no`:  輸入地圖編號，以選擇遊戲的地圖。
-- `time_limit`:  輸入遊戲時間，以規範遊戲進行時間。
-- `sound`:  輸入`on`或`off`，控制是否播放遊戲音效。
-- **如果在`mlgame`後加上`-1`，代表只執行一次遊戲。**
-
-## 遊戲操作：
-
-### 使用鍵盤
-
-### ＡＩ控制
-
-# 遊戲玩法
-
-## 過關條件
-
-1. 時間內，分數到達過關條件。
-
-## 失敗條件
-
-1. 時間歸零。
-2. 生命和血量歸零。
-
-## 物件設定：
-
-### Player
-
-### Mobs
+1. [ ] 新增教學文件
+2. [ ] 更新 game_module
+3. [ ] test case
 
 ---
-
-### Bullets
-
-1. 兩種分類 player bullet and mob bullet
-
----
-
-# 地圖說明
-
----
-
-### 寬1000 pixel；高600 pixel
-
-### 每格50 * 50 pixel，可放置一個物件
-
-## 地圖製作
-
----
-
-coming soon
+## Game Sours
+- 尋寶遊戲 [FindTheWay](https://github.com/CodeMaker0314/GameFramework)
+- 射擊遊戲 [ShmupSharp](https://github.com/Charlotte20061023/GameFramework)
+- 競速遊戲 [Racing](https://github.com/LiPeggy/GameFramework)
+- 射擊遊戲 [ShmupPlusPlus](https://github.com/jia211023/GameFramework)
+- 射擊遊戲 [ShmupPlus](https://github.com/Nov20Firth/GameFramework)
