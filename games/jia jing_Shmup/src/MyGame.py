@@ -8,18 +8,18 @@ from mlgame.view.decorator import check_game_progress, check_game_result
 from mlgame.view.view_model import Scene, create_text_view_data, create_scene_progress_data, create_asset_init_data, \
     create_image_view_data
 
-from .Player import Player
-from .Prop import Prop
-from .SoundController import SoundController
-from .TiledMap import TiledMap
-from .Wall import Wall
-from .Treasure import Treasure
-from .Bomb import Bomb
+from games.FindTheWay.src.Player import Player
+from games.FindTheWay.src.Prop import Prop
+from games.FindTheWay.src.SoundController import SoundController
+from games.FindTheWay.src.TiledMap import TiledMap
+from games.FindTheWay.src.Wall import Wall
+from games.FindTheWay.src.Treasure import Treasure
+from games.FindTheWay.src.Bomb import Bomb
 
-ASSET_PATH = path.join(path.dirname(__file__), "../asset")
+ASSET_PATH = path.join(path.dirname(__file__), "../../FindTheWay/asset")
 WIDTH = 1000
 HEIGHT = 600
-EXPLOSION_PATH = path.join(path.dirname(__file__), "..", "asset", "image", "explosion.png")
+EXPLOSION_PATH = path.join(path.dirname(__file__), "../../FindTheWay", "asset", "image", "explosion.png")
 
 
 # class 類別名稱(繼承的類別):

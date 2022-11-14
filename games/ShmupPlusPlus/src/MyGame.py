@@ -10,7 +10,6 @@ from mlgame.view.view_model import Scene, create_text_view_data, create_scene_pr
 
 from .Mob import Mob
 from .Player import Player
-from .Prop import Prop
 from .SoundController import SoundController
 from .TiledMap import TiledMap
 from .Wall import Wall

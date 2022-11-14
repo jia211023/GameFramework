@@ -7,6 +7,8 @@ from mlgame.view.view_model import create_image_view_data, create_asset_init_dat
 from .env import IMAGE_DIR
 Vec = pygame.math.Vector2
 
+PLAYER_PATH = path.join(path.dirname(__file__), "..", "asset", "image", "桐人.jpg")
+
 
 class Player(pygame.sprite.Sprite):
     def __init__(self, construction: dict, **kwargs):
@@ -35,6 +37,16 @@ class Player(pygame.sprite.Sprite):
         self._is_shoot = False
 
     def update(self, command: dict) -> None:
+
+        if "UP" in command["1p"]:
+            self.rect.y += 10
+        elif "DOWN" in command["1p"]:
+            self.rect.y -= 10
+        elif "RIGHT" in command["1p"]:
+            self.rect. x += 10
+        elif "LEFT" in command["1p"]:
+            self.rect.x -= 10
+
         """
         更新玩家資料
         self._used_frame += 1
@@ -183,7 +195,7 @@ class Player(pygame.sprite.Sprite):
         :return:
         """
         image_init_data = create_asset_init_data(f"{self._id}P", self.rect.width, self.rect.height
-                                                 , path.join(IMAGE_DIR, "player.png"), "url")
+                                                 , PLAYER_PATH, "url")
         return image_init_data
 
     def get_info_to_game_result(self):

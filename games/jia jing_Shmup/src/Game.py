@@ -30,6 +30,7 @@ class Game(PaiaGame):
             self.frame_count += 1
             self.game_mode.update(commands)
             if not self.is_running():
+
                 return "RESET"
 
     def reset(self):
